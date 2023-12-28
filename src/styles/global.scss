@@ -1,3 +1,6 @@
+@import './variables.scss';
+@import './responsive.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +10,34 @@
 a {
   text-decoration: none;
   color: inherit;
+}
+body {
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+.main {
+  font-family: 'Inter', sans-serif;
+  background-color: $main-bg;
+  color: $main-color;
+}
+
+.container {
+  display: flex;
+}
+
+.menuContainer {
+  width: 210px;
+  padding: 5px 20px;
+  border-right: 2px solid $soft-bg;
+  justify-content: space-between;
+  @include lg {
+    width: max-content;
+  }
+}
+
+.contentContainer {
+  width: 100%;
+  padding: 5px 20px;
 }
